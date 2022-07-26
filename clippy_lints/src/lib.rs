@@ -302,6 +302,7 @@ mod mut_mutex_lock;
 mod mut_reference;
 mod mutable_debug_assertion;
 mod mutex_atomic;
+mod near_assert_require;
 mod needless_arbitrary_self_type;
 mod needless_bool;
 mod needless_borrowed_ref;
@@ -546,6 +547,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         store.register_late_pass(|| Box::new(utils::internal_lints::MatchTypeOnDiagItem));
         store.register_late_pass(|| Box::new(utils::internal_lints::OuterExpnDataPass));
         store.register_late_pass(|| Box::new(utils::internal_lints::MsrvAttrImpl));
+        store.register_late_pass(|| Box::new(near_assert_require::NearAssertRequire));
     }
 
     store.register_late_pass(|| Box::new(utils::dump_hir::DumpHir));
@@ -917,6 +919,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
     store.register_late_pass(move || Box::new(operators::Operators::new(verbose_bit_mask_threshold)));
     store.register_late_pass(|| Box::new(invalid_utf8_in_unchecked::InvalidUtf8InUnchecked));
     store.register_late_pass(|| Box::new(std_instead_of_core::StdReexports));
+    store.register_late_pass(|| Box::new(near_assert_require::NearAssertRequire));
     // add lints here, do not remove this comment, it's used in `new_lint`
 }
 

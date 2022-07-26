@@ -1,0 +1,15 @@
+error: used `assert!` from standard rust
+  --> $DIR/near_assert_require.rs:17:9
+   |
+LL |         assert!(y < 10 * 8);
+   |         ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `-D clippy::near-assert-require` implied by `-D warnings`
+note: use `require` for near contracts
+  --> $DIR/near_assert_require.rs:17:9
+   |
+LL |         assert!(y < 10 * 8);
+   |         ^^^^^^^^^^^^^^^^^^^
+
+error: aborting due to previous error
+

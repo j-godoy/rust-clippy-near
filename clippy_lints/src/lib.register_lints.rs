@@ -388,6 +388,7 @@ store.register_lints(&[
     mutable_debug_assertion::DEBUG_ASSERT_WITH_MUT_CALL,
     mutex_atomic::MUTEX_ATOMIC,
     mutex_atomic::MUTEX_INTEGER,
+    near_assert_require::NEAR_ASSERT_REQUIRE,
     needless_arbitrary_self_type::NEEDLESS_ARBITRARY_SELF_TYPE,
     needless_bool::BOOL_COMPARISON,
     needless_bool::NEEDLESS_BOOL,

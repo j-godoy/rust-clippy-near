@@ -67,6 +67,7 @@ store.register_group(true, "clippy::pedantic", Some("clippy_pedantic"), vec![
     LintId::of(misc::USED_UNDERSCORE_BINDING),
     LintId::of(mismatching_type_param_order::MISMATCHING_TYPE_PARAM_ORDER),
     LintId::of(mut_mut::MUT_MUT),
+    LintId::of(near_assert_require::NEAR_ASSERT_REQUIRE),
     LintId::of(needless_continue::NEEDLESS_CONTINUE),
     LintId::of(needless_for_each::NEEDLESS_FOR_EACH),
     LintId::of(needless_pass_by_value::NEEDLESS_PASS_BY_VALUE),
